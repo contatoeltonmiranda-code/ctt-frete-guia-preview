@@ -101,6 +101,37 @@
       A loja soma o peso de todos os itens do carrinho e aplica a regra.
     </div>
 
+    <div class="box box-verde">
+      <div class="titulo">Só o peso basta? E as medidas (tamanho)?</div>
+      <ul>
+        <li>Para esta configuração, o sistema calcula <strong>apenas pelo peso</strong>.
+        Então, na maioria dos casos, basta preencher o peso de cada produto.</li>
+        <li>MAS o CTT tem uma regra: ele cobra pelo <strong>maior valor</strong> entre o
+        peso real e o chamado <strong>"peso volumétrico"</strong> (o peso calculado pelo
+        tamanho da caixa).</li>
+        <li>Isso só importa para produtos <strong>leves e grandes</strong> (ex.: uma caixa
+        grande, mas vazia/leve). Para produtos pequenos e densos (frascos, cremes, potes),
+        o peso real é sempre maior &mdash; pode ignorar as medidas.</li>
+      </ul>
+      <table>
+        <tr><th>Tipo de produto</th><th>Precisa preencher medidas?</th></tr>
+        <tr>
+          <td>Pequeno e pesado (frascos, potes, cremes)</td>
+          <td><strong>Não</strong> &mdash; só o peso basta</td>
+        </tr>
+        <tr>
+          <td>Leve e volumoso (caixas grandes, itens fofos)</td>
+          <td><strong>Sim</strong> &mdash; o tamanho pode encarecer o envio</td>
+        </tr>
+      </table>
+      <p><strong>Conta do peso volumétrico do CTT:</strong> (comprimento &times; largura
+      &times; altura, em cm) &divide; 6000 = peso em kg. Se esse número for maior que o
+      peso real, o CTT cobra por ele.</p>
+      <p><strong>Aviso:</strong> este plugin atual <strong>não calcula peso volumétrico
+      automaticamente</strong> &mdash; se a loja vende itens volumosos, considere um plugin
+      que faça esse cálculo.</p>
+    </div>
+
     <h2><span class="num">2</span> Como chegar ao painel de configuração</h2>
     <p>Entre no painel da loja (WordPress) e siga este caminho, clicando um a um:</p>
 
