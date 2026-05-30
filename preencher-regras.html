@@ -90,9 +90,13 @@
       <tr><td>Title</td><td><span class="val">Envio CTT &mdash; Entrega em 2 dias &uacute;teis</span></td></tr>
       <tr><td>Destination</td><td><span class="val">All allowed</span></td></tr>
       <tr><td>Order Subtotal</td><td><span class="vazio">(deixar vazio)</span></td></tr>
-      <tr><td>Weight Rate</td><td><span class="vazio">(deixar vazio)</span></td></tr>
-      <tr><td>Limit Total Cost</td><td><span class="vazio">(deixar vazio)</span></td></tr>
+      <tr><td>Weight Rate &middot; charge</td><td><span class="vazio">(deixar vazio)</span></td></tr>
+      <tr><td>Weight Rate &middot; for each</td><td><span class="vazio">(deixar vazio)</span></td></tr>
+      <tr><td>Weight Rate &middot; over</td><td><span class="vazio">(deixar vazio)</span></td></tr>
+      <tr><td>Limit Total Cost &middot; minimum</td><td><span class="vazio">(APAGAR &mdash; deixar vazio)</span></td></tr>
+      <tr><td>Limit Total Cost &middot; maximum</td><td><span class="vazio">(APAGAR &mdash; deixar vazio)</span></td></tr>
     </table>
+    <p style="font-size:14px;color:var(--cinza);margin:-6px 0 0;">O plugin avisa: <em>&laquo;deixe <strong>charge</strong> vazio se o pre&ccedil;o &eacute; fixo&raquo;</em> &mdash; &eacute; o nosso caso, porque o pre&ccedil;o j&aacute; vem do <strong>Base Cost</strong> de cada faixa.</p>
     <h3>&#9313; Campos que MUDAM em cada regra</h3>
     <table class="regras">
       <tr><th>Regra</th><th>Order Weight: above</th><th>Order Weight: below</th><th>Base Cost</th></tr>
@@ -107,6 +111,11 @@
       <tr><td>Regra 09</td><td><span class="val">8</span></td><td><span class="val">9</span></td><td><span class="val">6.33</span></td></tr>
     </table>
 
+    <div class="box box-vermelho">
+      <div class="titulo">&#9888;&#65039; ATEN&Ccedil;&Atilde;O ao <strong>Limit Total Cost</strong></div>
+      <p style="margin-bottom:0;">Se aparecer <span class="val">50</span> nos campos <strong>minimum</strong> / <strong>maximum</strong>, <strong>APAGUE os dois</strong>. Se deixar <span class="val">50</span>/<span class="val">50</span>, o frete fica preso em <strong>50&euro;</strong> em todos os pedidos. T&ecirc;m de ficar <strong>vazios</strong> (vale para os dois m&eacute;todos).</p>
+    </div>
+
     <h2><span class="num">3</span> M&eacute;todo 3 &mdash; Envio CTT (entrega amanh&atilde;, 1 dia &uacute;til)</h2>
     <h3>&#9312; Campos FIXOS (preenche IGUAL nas 9 regras)</h3>
     <table class="fixos">
@@ -116,9 +125,13 @@
       <tr><td>Title</td><td><span class="val">Envio CTT &mdash; Entrega amanh&atilde; (1 dia &uacute;til)</span></td></tr>
       <tr><td>Destination</td><td><span class="val">All allowed</span></td></tr>
       <tr><td>Order Subtotal</td><td><span class="vazio">(deixar vazio)</span></td></tr>
-      <tr><td>Weight Rate</td><td><span class="vazio">(deixar vazio)</span></td></tr>
-      <tr><td>Limit Total Cost</td><td><span class="vazio">(deixar vazio)</span></td></tr>
+      <tr><td>Weight Rate &middot; charge</td><td><span class="vazio">(deixar vazio)</span></td></tr>
+      <tr><td>Weight Rate &middot; for each</td><td><span class="vazio">(deixar vazio)</span></td></tr>
+      <tr><td>Weight Rate &middot; over</td><td><span class="vazio">(deixar vazio)</span></td></tr>
+      <tr><td>Limit Total Cost &middot; minimum</td><td><span class="vazio">(APAGAR &mdash; deixar vazio)</span></td></tr>
+      <tr><td>Limit Total Cost &middot; maximum</td><td><span class="vazio">(APAGAR &mdash; deixar vazio)</span></td></tr>
     </table>
+    <p style="font-size:14px;color:var(--cinza);margin:-6px 0 0;">O plugin avisa: <em>&laquo;deixe <strong>charge</strong> vazio se o pre&ccedil;o &eacute; fixo&raquo;</em> &mdash; &eacute; o nosso caso, porque o pre&ccedil;o j&aacute; vem do <strong>Base Cost</strong> de cada faixa.</p>
     <h3>&#9313; Campos que MUDAM em cada regra</h3>
     <table class="regras">
       <tr><th>Regra</th><th>Order Weight: above</th><th>Order Weight: below</th><th>Base Cost</th></tr>
