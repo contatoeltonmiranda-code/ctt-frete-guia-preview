@@ -90,7 +90,7 @@
       <li><strong>A tabela de preços dos CTT</strong> — quanto os CTT cobram a si por cada faixa de peso (ex.: até 1kg = X EUR, até 2kg = Y EUR). Está no contrato ou no site dos CTT.</li>
       <li><strong>O peso de cada produto</strong> — quanto pesa cada item que vende (em quilos).</li>
       <li><strong>Decisão de margem</strong> — quer cobrar ao cliente o mesmo que paga aos CTT, ou um pouco mais?</li>
-      <li><strong>Frete grátis?</strong> — quer oferecer envio gratuito acima de um certo valor de compra? (ex.: grátis acima de 50 EUR)</li>
+      <li><strong>Frete grátis?</strong> — quer oferecer envio gratuito acima de um certo valor de compra? (ex.: grátis acima de 80 EUR)</li>
     </ul>
 
     <div class="box box-amarelo">
@@ -130,6 +130,58 @@
       <p><strong>Aviso:</strong> este plugin atual <strong>não calcula peso volumétrico
       automaticamente</strong> &mdash; se a loja vende itens volumosos, considere um plugin
       que faça esse cálculo.</p>
+    </div>
+
+    <h2><span class="num">&#9733;</span> Configuração pronta para esta loja (Portugal Continental)</h2>
+
+    <div class="box box-verde">
+      <div class="titulo">A configuração desta loja</div>
+      Esta é a configuração definida com base nos dados que o cliente enviou.
+      Preço igual ao dos CTT (sem margem), entrega ao domicílio, com envio grátis
+      acima de 80&euro;. Por agora, apenas Portugal Continental.
+    </div>
+
+    <p>No checkout, o comprador escolhe entre <strong>duas velocidades de entrega</strong>
+    (ambas ao domicílio): <strong>"Entrega amanhã (1 dia útil)"</strong> ou
+    <strong>"Entrega em 2 dias úteis"</strong> (mais barata).</p>
+
+    <h3>Entrega ao domicílio — AMANHÃ (1 dia útil)</h3>
+    <table>
+      <tr><th>Peso do pedido</th><th>Preço do envio</th></tr>
+      <tr><td>Até 1 kg</td><td>5,10&euro;</td></tr>
+      <tr><td>Até 2 kg</td><td>5,37&euro;</td></tr>
+      <tr><td>Até 3 kg</td><td>5,51&euro;</td></tr>
+      <tr><td>Até 4 kg</td><td>5,63&euro;</td></tr>
+      <tr><td>Até 5 kg</td><td>5,77&euro;</td></tr>
+      <tr><td>Até 6 kg</td><td>5,90&euro;</td></tr>
+      <tr><td>Até 7 kg</td><td>6,02&euro;</td></tr>
+      <tr><td>Até 8 kg</td><td>6,16&euro;</td></tr>
+      <tr><td>Até 9 kg</td><td>6,46&euro;</td></tr>
+    </table>
+
+    <h3>Entrega ao domicílio — EM 2 DIAS (2 dias úteis)</h3>
+    <table>
+      <tr><th>Peso do pedido</th><th>Preço do envio</th></tr>
+      <tr><td>Até 1 kg</td><td>4,85&euro;</td></tr>
+      <tr><td>Até 2 kg</td><td>5,10&euro;</td></tr>
+      <tr><td>Até 3 kg</td><td>5,23&euro;</td></tr>
+      <tr><td>Até 4 kg</td><td>5,52&euro;</td></tr>
+      <tr><td>Até 5 kg</td><td>5,66&euro;</td></tr>
+      <tr><td>Até 6 kg</td><td>5,78&euro;</td></tr>
+      <tr><td>Até 7 kg</td><td>5,90&euro;</td></tr>
+      <tr><td>Até 8 kg</td><td>6,04&euro;</td></tr>
+      <tr><td>Até 9 kg</td><td>6,33&euro;</td></tr>
+    </table>
+
+    <div class="box box-amarelo">
+      <div class="titulo">Como aplicar no plugin</div>
+      Criar <strong>dois métodos de envio</strong> na zona "Portugal Continental"
+      (um para cada velocidade). Em cada método, criar uma regra por faixa de peso onde
+      <strong>Base Cost</strong> (custo base) = o preço da faixa e
+      <strong>Weight Rate</strong> (taxa por peso) fica vazio.
+      Para o envio grátis, adicionar o método <strong>"Frete grátis"</strong> exigindo
+      valor do pedido a partir de 80&euro;, e ativar a opção
+      <strong>"Esconder outras taxas quando o frete grátis estiver disponível"</strong>.
     </div>
 
     <h2><span class="num">2</span> Como chegar ao painel de configuração</h2>
@@ -271,6 +323,36 @@
     </div>
 
   </main>
+
+    <h2><span class="num">&#9733;</span> O que já está definido e o que falta confirmar</h2>
+
+    <div class="box box-verde">
+      <div class="titulo">&#9989; Já definido:</div>
+      <ul>
+        <li><strong>Margem:</strong> sem margem — preço igual ao dos CTT</li>
+        <li><strong>Frete grátis:</strong> acima de 80&euro;</li>
+        <li><strong>Zona inicial:</strong> Portugal Continental</li>
+        <li><strong>Entrega:</strong> ao domicílio</li>
+        <li><strong>Velocidades:</strong> entrega amanhã + entrega em 2 dias</li>
+      </ul>
+    </div>
+
+    <div class="box box-amarelo">
+      <div class="titulo">&#9203; A confirmar / avisar o cliente:</div>
+      <ol>
+        <li><strong>Ilhas e a 3ª região</strong> — o cliente falou em 3 zonas de envio,
+        mas só enviou a tabela de preços de Portugal Continental. Essas duas zonas ficam
+        de fora por agora. Para as ativar, precisamos das tabelas de preços delas.</li>
+        <li><strong>Velocidade de entrega</strong> — vamos oferecer as duas opções
+        (amanhã + 2 dias). Confirmar com o cliente se é mesmo isso, ou se prefere só uma.</li>
+        <li><strong>Acima de 9 kg</strong> — a tabela enviada vai só até 9 kg. Definir o
+        preço para encomendas acima de 9 kg, ou limitar o peso máximo por encomenda.</li>
+        <li><strong>Peso volumétrico</strong> — produtos leves e grandes podem custar mais
+        nos CTT; este plugin não calcula isso automaticamente.</li>
+        <li><strong>Peso dos produtos</strong> — garantir que todos os produtos têm o peso
+        preenchido no cadastro, senão o cálculo do envio falha.</li>
+      </ol>
+    </div>
 
   <footer>
     Guia de apoio — Configuração de frete CTT por peso (WooCommerce).<br>
