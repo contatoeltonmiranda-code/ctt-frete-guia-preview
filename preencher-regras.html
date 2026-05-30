@@ -55,92 +55,107 @@
   table.fixos td:first-child{width:42%;color:var(--cinza);}
 </style>
 </head>
+
 <body>
 <div class="wrap">
   <header>
     <span class="selo">FOLHA DE PREENCHIMENTO</span>
     <h1>Folha de preenchimento &mdash; Regras de frete CTT</h1>
-    <p>Copie e cole cada valor no painel. Portugal Continental.</p>
+    <p>Portugal Continental. Copie e cole cada valor.</p>
   </header>
   <main>
+    <div class="box box-verde">
+      <div class="titulo">Como est&aacute; organizado</div>
+      <pre style="font-family:'Courier New',monospace;font-size:14px;line-height:1.7;white-space:pre-wrap;margin:0 0 10px;">ZONA: Portugal Continental
+   &#9500;&#9472; M&eacute;todo 1: Frete gr&aacute;tis  (condi&ccedil;&atilde;o: acima de 80&euro; &mdash; N&Atilde;O tem regras de peso)
+   &#9500;&#9472; M&eacute;todo 2: Envio CTT &mdash; 2 dias  (9 regras, uma por faixa de peso)
+   &#9492;&#9472; M&eacute;todo 3: Envio CTT &mdash; Amanh&atilde;  (9 regras, uma por faixa de peso)</pre>
+      <p style="margin-bottom:0;">Cada "regra" &eacute; criada clicando em <strong>"Add new"</strong>. S&atilde;o 9 regras por m&eacute;todo. No total: <strong>18 regras de peso + 1 m&eacute;todo de frete gr&aacute;tis &agrave; parte</strong>.</p>
+    </div>
+
     <div class="box box-vermelho">
-      <div class="titulo">Aviso importante &mdash; leia antes de come&ccedil;ar</div>
+      <div class="titulo">Avisos importantes</div>
       <ul>
-        <li>Use <strong>SEMPRE ponto</strong> nos decimais (ex.: <span class="val">4.85</span>), nunca v&iacute;rgula.</li>
-        <li>Crie <strong>DOIS m&eacute;todos de envio</strong> na zona Portugal Continental: um para "Entrega em 2 dias" e outro para "Entrega amanh&atilde;". Cada m&eacute;todo tem as suas 9 regras.</li>
-        <li>Cada faixa de peso = uma regra (bot&atilde;o <strong>"Add new"</strong>). S&oacute; muda o <strong>Order Weight</strong> e o <strong>Base Cost</strong>. Os outros campos repetem.</li>
+        <li>Decimais com <strong>ponto</strong> (<span class="val">4.85</span>), nunca v&iacute;rgula.</li>
+        <li>Em cada regra preenche os <strong>Campos Fixos</strong> + os <strong>campos da linha</strong> da tabela.</li>
       </ul>
     </div>
-    <h2><span class="num">1</span> M&eacute;todo 1 &mdash; Entrega em 2 dias &uacute;teis (mais barato)</h2>
-    <h3>Campos fixos deste m&eacute;todo</h3>
+
+    <h2><span class="num">2</span> M&eacute;todo 2 &mdash; Envio CTT (entrega em 2 dias &uacute;teis)</h2>
+    <h3>&#9312; Campos FIXOS (preenche IGUAL nas 9 regras)</h3>
     <table class="fixos">
       <tr><th>Campo</th><th>Valor</th></tr>
       <tr><td>Taxable</td><td><span class="val">Yes</span></td></tr>
+      <tr><td>Label</td><td><span class="val">Frete CTT</span> <span class="vazio">(nome interno, o cliente n&atilde;o v&ecirc;)</span></td></tr>
       <tr><td>Title</td><td><span class="val">Envio CTT &mdash; Entrega em 2 dias &uacute;teis</span></td></tr>
       <tr><td>Destination</td><td><span class="val">All allowed</span></td></tr>
       <tr><td>Order Subtotal</td><td><span class="vazio">(deixar vazio)</span></td></tr>
       <tr><td>Weight Rate</td><td><span class="vazio">(deixar vazio)</span></td></tr>
       <tr><td>Limit Total Cost</td><td><span class="vazio">(deixar vazio)</span></td></tr>
     </table>
-    <h3>As 9 regras (Add new para cada)</h3>
+    <h3>&#9313; Campos que MUDAM em cada regra</h3>
     <table class="regras">
       <tr><th>Regra</th><th>Order Weight: above</th><th>Order Weight: below</th><th>Base Cost</th></tr>
-      <tr><td>1 (at&eacute; 1kg)</td><td><span class="val">0</span></td><td><span class="val">1</span></td><td><span class="val">4.85</span></td></tr>
-      <tr><td>2 (at&eacute; 2kg)</td><td><span class="val">1</span></td><td><span class="val">2</span></td><td><span class="val">5.10</span></td></tr>
-      <tr><td>3 (at&eacute; 3kg)</td><td><span class="val">2</span></td><td><span class="val">3</span></td><td><span class="val">5.23</span></td></tr>
-      <tr><td>4 (at&eacute; 4kg)</td><td><span class="val">3</span></td><td><span class="val">4</span></td><td><span class="val">5.52</span></td></tr>
-      <tr><td>5 (at&eacute; 5kg)</td><td><span class="val">4</span></td><td><span class="val">5</span></td><td><span class="val">5.66</span></td></tr>
-      <tr><td>6 (at&eacute; 6kg)</td><td><span class="val">5</span></td><td><span class="val">6</span></td><td><span class="val">5.78</span></td></tr>
-      <tr><td>7 (at&eacute; 7kg)</td><td><span class="val">6</span></td><td><span class="val">7</span></td><td><span class="val">5.90</span></td></tr>
-      <tr><td>8 (at&eacute; 8kg)</td><td><span class="val">7</span></td><td><span class="val">8</span></td><td><span class="val">6.04</span></td></tr>
-      <tr><td>9 (at&eacute; 9kg)</td><td><span class="val">8</span></td><td><span class="val">9</span></td><td><span class="val">6.33</span></td></tr>
+      <tr><td>Regra 01</td><td><span class="val">0</span></td><td><span class="val">1</span></td><td><span class="val">4.85</span></td></tr>
+      <tr><td>Regra 02</td><td><span class="val">1</span></td><td><span class="val">2</span></td><td><span class="val">5.10</span></td></tr>
+      <tr><td>Regra 03</td><td><span class="val">2</span></td><td><span class="val">3</span></td><td><span class="val">5.23</span></td></tr>
+      <tr><td>Regra 04</td><td><span class="val">3</span></td><td><span class="val">4</span></td><td><span class="val">5.52</span></td></tr>
+      <tr><td>Regra 05</td><td><span class="val">4</span></td><td><span class="val">5</span></td><td><span class="val">5.66</span></td></tr>
+      <tr><td>Regra 06</td><td><span class="val">5</span></td><td><span class="val">6</span></td><td><span class="val">5.78</span></td></tr>
+      <tr><td>Regra 07</td><td><span class="val">6</span></td><td><span class="val">7</span></td><td><span class="val">5.90</span></td></tr>
+      <tr><td>Regra 08</td><td><span class="val">7</span></td><td><span class="val">8</span></td><td><span class="val">6.04</span></td></tr>
+      <tr><td>Regra 09</td><td><span class="val">8</span></td><td><span class="val">9</span></td><td><span class="val">6.33</span></td></tr>
     </table>
-    <h2><span class="num">2</span> M&eacute;todo 2 &mdash; Entrega amanh&atilde; (1 dia &uacute;til)</h2>
-    <h3>Campos fixos deste m&eacute;todo</h3>
+
+    <h2><span class="num">3</span> M&eacute;todo 3 &mdash; Envio CTT (entrega amanh&atilde;, 1 dia &uacute;til)</h2>
+    <h3>&#9312; Campos FIXOS (preenche IGUAL nas 9 regras)</h3>
     <table class="fixos">
       <tr><th>Campo</th><th>Valor</th></tr>
       <tr><td>Taxable</td><td><span class="val">Yes</span></td></tr>
+      <tr><td>Label</td><td><span class="val">Frete CTT</span></td></tr>
       <tr><td>Title</td><td><span class="val">Envio CTT &mdash; Entrega amanh&atilde; (1 dia &uacute;til)</span></td></tr>
       <tr><td>Destination</td><td><span class="val">All allowed</span></td></tr>
       <tr><td>Order Subtotal</td><td><span class="vazio">(deixar vazio)</span></td></tr>
       <tr><td>Weight Rate</td><td><span class="vazio">(deixar vazio)</span></td></tr>
       <tr><td>Limit Total Cost</td><td><span class="vazio">(deixar vazio)</span></td></tr>
     </table>
-    <h3>As 9 regras (Add new para cada)</h3>
+    <h3>&#9313; Campos que MUDAM em cada regra</h3>
     <table class="regras">
       <tr><th>Regra</th><th>Order Weight: above</th><th>Order Weight: below</th><th>Base Cost</th></tr>
-      <tr><td>1 (at&eacute; 1kg)</td><td><span class="val">0</span></td><td><span class="val">1</span></td><td><span class="val">5.10</span></td></tr>
-      <tr><td>2 (at&eacute; 2kg)</td><td><span class="val">1</span></td><td><span class="val">2</span></td><td><span class="val">5.37</span></td></tr>
-      <tr><td>3 (at&eacute; 3kg)</td><td><span class="val">2</span></td><td><span class="val">3</span></td><td><span class="val">5.51</span></td></tr>
-      <tr><td>4 (at&eacute; 4kg)</td><td><span class="val">3</span></td><td><span class="val">4</span></td><td><span class="val">5.63</span></td></tr>
-      <tr><td>5 (at&eacute; 5kg)</td><td><span class="val">4</span></td><td><span class="val">5</span></td><td><span class="val">5.77</span></td></tr>
-      <tr><td>6 (at&eacute; 6kg)</td><td><span class="val">5</span></td><td><span class="val">6</span></td><td><span class="val">5.90</span></td></tr>
-      <tr><td>7 (at&eacute; 7kg)</td><td><span class="val">6</span></td><td><span class="val">7</span></td><td><span class="val">6.02</span></td></tr>
-      <tr><td>8 (at&eacute; 8kg)</td><td><span class="val">7</span></td><td><span class="val">8</span></td><td><span class="val">6.16</span></td></tr>
-      <tr><td>9 (at&eacute; 9kg)</td><td><span class="val">8</span></td><td><span class="val">9</span></td><td><span class="val">6.46</span></td></tr>
+      <tr><td>Regra 01</td><td><span class="val">0</span></td><td><span class="val">1</span></td><td><span class="val">5.10</span></td></tr>
+      <tr><td>Regra 02</td><td><span class="val">1</span></td><td><span class="val">2</span></td><td><span class="val">5.37</span></td></tr>
+      <tr><td>Regra 03</td><td><span class="val">2</span></td><td><span class="val">3</span></td><td><span class="val">5.51</span></td></tr>
+      <tr><td>Regra 04</td><td><span class="val">3</span></td><td><span class="val">4</span></td><td><span class="val">5.63</span></td></tr>
+      <tr><td>Regra 05</td><td><span class="val">4</span></td><td><span class="val">5</span></td><td><span class="val">5.77</span></td></tr>
+      <tr><td>Regra 06</td><td><span class="val">5</span></td><td><span class="val">6</span></td><td><span class="val">5.90</span></td></tr>
+      <tr><td>Regra 07</td><td><span class="val">6</span></td><td><span class="val">7</span></td><td><span class="val">6.02</span></td></tr>
+      <tr><td>Regra 08</td><td><span class="val">7</span></td><td><span class="val">8</span></td><td><span class="val">6.16</span></td></tr>
+      <tr><td>Regra 09</td><td><span class="val">8</span></td><td><span class="val">9</span></td><td><span class="val">6.46</span></td></tr>
     </table>
-    <h2><span class="num">3</span> Frete gr&aacute;tis acima de 80&euro;</h2>
+
+    <h2><span class="num">1</span> M&eacute;todo 1 &mdash; Frete gr&aacute;tis (&agrave; parte, N&Atilde;O &eacute; regra de peso)</h2>
     <div class="box box-amarelo">
-      <div class="titulo">Isto N&Atilde;O se mete nas regras acima &mdash; faz-se &agrave; parte</div>
+      <div class="titulo">Isto n&atilde;o se mete nas regras de peso. &Eacute; um m&eacute;todo separado.</div>
       <ol>
-        <li>WooCommerce <span class="seta">&rarr;</span> Configura&ccedil;&otilde;es <span class="seta">&rarr;</span> Entrega <span class="seta">&rarr;</span> zona <strong>"Portugal Continental"</strong> <span class="seta">&rarr;</span> <strong>"Adicionar m&eacute;todo de envio"</strong> <span class="seta">&rarr;</span> escolher <strong>"Frete gr&aacute;tis"</strong>.</li>
-        <li>Em <strong>"O frete gr&aacute;tis requer..."</strong> escolher <strong>"Um valor m&iacute;nimo de pedido"</strong>.</li>
+        <li>Na zona <strong>Portugal Continental</strong>, clicar <strong>"Adicionar m&eacute;todo de envio"</strong> <span class="seta">&rarr;</span> escolher <strong>"Frete gr&aacute;tis"</strong>.</li>
+        <li>Em <strong>"O frete gr&aacute;tis requer..."</strong> <span class="seta">&rarr;</span> escolher <strong>"Um valor m&iacute;nimo de pedido"</strong>.</li>
         <li>Valor m&iacute;nimo do pedido = <span class="val">80</span></li>
-        <li>Para o cliente n&atilde;o ver as duas op&ccedil;&otilde;es (paga + gr&aacute;tis) ao mesmo tempo acima de 80&euro;, ativar a op&ccedil;&atilde;o de <strong>esconder os outros m&eacute;todos quando o frete gr&aacute;tis est&aacute; dispon&iacute;vel</strong> (pode estar no pr&oacute;prio m&eacute;todo ou nas defini&ccedil;&otilde;es gerais de entrega). Testar com um pedido acima de 80&euro;.</li>
+        <li>Ativar a op&ccedil;&atilde;o de <strong>esconder os outros m&eacute;todos</strong> quando o frete gr&aacute;tis est&aacute; dispon&iacute;vel (para o cliente n&atilde;o ver 'pago' e 'gr&aacute;tis' ao mesmo tempo acima de 80&euro;). Testar.</li>
       </ol>
     </div>
-    <h2><span class="num">4</span> Depois de preencher</h2>
+
+    <h2><span class="num">4</span> No fim &mdash; testar</h2>
     <div class="box box-verde">
       <div class="titulo">Checklist final</div>
       <ul class="checklist">
-        <li>Guardar/salvar cada m&eacute;todo.</li>
-        <li>Fazer um pedido de teste com <strong>0,5kg</strong>, <strong>2,5kg</strong> e <strong>9kg</strong> para conferir os valores.</li>
-        <li>Fazer um pedido de teste <strong>acima de 80&euro;</strong> e ver se aparece gr&aacute;tis.</li>
+        <li>Guardar cada m&eacute;todo.</li>
+        <li>Pedido teste de <strong>0,5kg / 2,5kg / 9kg</strong> <span class="seta">&rarr;</span> conferir o valor do frete.</li>
+        <li>Pedido teste <strong>acima de 80&euro;</strong> <span class="seta">&rarr;</span> deve aparecer gr&aacute;tis.</li>
       </ul>
     </div>
   </main>
   <footer>
-    Folha de preenchimento &mdash; Regras de frete CTT por peso (WooCommerce).<br>
+    Folha de preenchimento &mdash; Regras de frete CTT (WooCommerce).<br>
     Copie cada valor direto para o painel.
   </footer>
 </div>
